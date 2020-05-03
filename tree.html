@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>konva測試</title>
+
+    <script src="https://unpkg.com/konva@3.4.1/konva.min.js"></script>
+
+
+  </head>
+  <body>
+
+
+    <h2>Konva's Circle</h2>
+    <script src="https://unpkg.com/konva@3.4.1/konva.min.js"></script>  
+    <div id="container"> 
+      <script>
+      //Draw a tree
+      var stage = new Konva.Stage({
+        container:'container',
+        width:500,
+        height:300
+      });
+
+      var layer = new Konva.Layer();
+
+      var triangle_1 = new Konva.RegularPolygon({
+        x:50,
+        y:50,
+        sides:3,
+        radius:50,
+        fill:'green'
+      });
+
+      var triangle_2 = new Konva.RegularPolygon({
+        x:50,
+        y:80,
+        sides:3,
+        radius:50,
+        fill:'green'
+      });
+
+      var triangle_3 = new Konva.RegularPolygon({
+        x:50,
+        y:110,
+        sides:3,
+        radius:50,
+        fill:'green'
+      });
+
+
+      var rect = new Konva.Rect({
+        x:40,
+        y:135, 
+        width:20,
+        height:50,
+        fill:'brown'
+      });
+
+      layer.add(triangle_1);
+      layer.add(triangle_2);
+      layer.add(triangle_3);
+      layer.add(rect);
+      stage.add(layer);
+      layer.draw();
+
+
+      </script>
+
+
+    </div>
+
+  </body>
+</html>
